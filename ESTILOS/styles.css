@@ -218,12 +218,30 @@ footer a:hover {
 }
 
 .model-3d {
-    width: 60%;
-    height: 430px;
+    width: 60%; /* Aumenta esto a un 100% en pantallas pequeñas */
+    height: 430px; /* La altura se puede ajustar según sea necesario */
+    max-width: 100%; /* Evita que el modelo se salga del contenedor */
     border: 2px solid #ddd;
     border-radius: 8px;
+    margin-bottom: 20px; /* Separación inferior si es necesario */
 }
 
+/* Media Query para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .model-3d {
+        width: 100%; /* Ocupa el 100% del ancho disponible */
+        height: auto; /* Mantiene la relación de aspecto original */
+        max-width: 100%; /* Asegura que el contenedor no se desborde */
+    }
+}
+
+/* Opcional: Para pantallas extremadamente pequeñas (por ejemplo, móviles muy pequeños) */
+@media (max-width: 480px) {
+    .model-3d {
+        width: 90%; /* Usa un pequeño margen en pantallas muy pequeñas */
+        height: auto; /* Ajuste automático de la altura */
+    }
+}
 /* ESTILOS CANVA */
 .INFO_ADD,.contacto_u {
     text-align: center;
